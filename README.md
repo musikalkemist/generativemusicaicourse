@@ -37,6 +37,5 @@ Use the
 After the video lectures end in the first week of December 2023, there'll 
 be an in-person workshop. 
 You can get more info about the event and 
-register at this [website](https://www.upf.
-edu/web/mtg/generative-music-ai-workshop).
+register at this [website](https://www.upf.edu/web/mtg/generative-music-ai-workshop).
 
