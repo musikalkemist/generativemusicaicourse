@@ -26,7 +26,7 @@ There are 3 main instructors for the course:
 
 ## Video lectures
 All the videos of the course are available in this [YouTube 
-playlist]() on The Sound of AI channel.
+playlist](https://www.youtube.com/playlist?list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D) on The Sound of AI channel.
 
 ## The Sound of AI Slack community
 Join [The Sound of AI Slack community](https://valeriovelardo.com/the-sound-of-ai-community/) to discuss the topics of the course. 
@@ -39,3 +39,7 @@ be an in-person workshop.
 You can get more info about the event and 
 register at this [website](https://www.upf.edu/web/mtg/generative-music-ai-workshop).
 
+## Syllabus
+
+### Part 1: Foundations
+- [Course overview](https://www.youtube.com/watch?v=NpJWprrqlFw&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=2)
