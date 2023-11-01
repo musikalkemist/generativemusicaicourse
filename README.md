@@ -43,3 +43,4 @@ register at this [website](https://www.upf.edu/web/mtg/generative-music-ai-works
 
 ### Part 1: Foundations
 - [Course overview](https://www.youtube.com/watch?v=NpJWprrqlFw&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=2)
+- [What's generative music?]()
