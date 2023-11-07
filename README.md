@@ -46,5 +46,6 @@ register at this [website](https://www.upf.edu/web/mtg/generative-music-ai-works
 - [What's generative music?](https://www.youtube.com/watch?v=9QNG56fc_l8&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=2)
 - [History of generative music](https://www.youtube.com/watch?v=3znKoIUrgDI&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=3)
 - [Use cases](https://www.youtube.com/watch?v=Fg3TGfbEL64&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=4)
-- [Ethical implications]()
+- [Ethical implications](https://www.youtube.com/watch?v=DCaE5776Rqg&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=5)
+- [Symbolic vs audio generation]()
 
