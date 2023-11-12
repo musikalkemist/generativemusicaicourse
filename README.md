@@ -49,5 +49,9 @@ register at this [website](https://www.upf.edu/web/mtg/generative-music-ai-works
 - [Ethical implications](https://www.youtube.com/watch?v=DCaE5776Rqg&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=5)
 - [Symbolic vs audio generation](https://www.youtube.com/watch?v=VYxcHHJNTR0&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=6)
 - [Generative techniques](https://www.youtube.com/watch?v=W-_eWSrQ_vU&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=7)
-- [Limitations and future vision]()
+- [Limitations and future vision](https://www.youtube.com/watch?v=viR9q61wV4Q&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=8)
+
+### Part 2: Technical dive
+- [Generative grammars]()
+
 
