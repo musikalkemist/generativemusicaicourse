@@ -39,6 +39,16 @@ be an in-person workshop.
 You can get more info about the event and 
 register at this [website](https://www.upf.edu/web/mtg/generative-music-ai-workshop).
 
+## Coding environement
+The code examples in Part 2 of the course are written in Python 3.8.
+
+## Installing dependencies
+Create a Python virtual environment. 
+
+Then, run the following code in the root directory:
+
+*$ pip install -r requirements.txt* 
+
 ## Syllabus
 
 ### Part 1: Foundations
@@ -52,6 +62,7 @@ register at this [website](https://www.upf.edu/web/mtg/generative-music-ai-works
 - [Limitations and future vision](https://www.youtube.com/watch?v=viR9q61wV4Q&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=8)
 
 ### Part 2: Technical dive
-- [Generative grammars]()
+- [Generative grammars](https://www.youtube.com/watch?v=h0uuVelImro&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=9)
+- [Chord generation with generative grammars]()
 
 
