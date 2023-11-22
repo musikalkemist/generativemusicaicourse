@@ -66,5 +66,6 @@ Then, run the following code in the root directory:
 - [Chord generation with generative grammars](https://www.youtube.com/watch?v=ozCxNbOBmUs&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=10)
 - [Markov chains](https://www.youtube.com/watch?v=gn-_ocUaGYo&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=11)
 - [Melody generation with markov chains]()
+- [Cellular automata](https://www.youtube.com/watch?v=V7OPB6zmSdM&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=12)
 
 
