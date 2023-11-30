@@ -290,7 +290,7 @@ class FitnessEvaluator:
                 self.melody_data.notes
             ):
                 pitch, duration = self.melody_data.notes[melody_index]
-                if pitch in self.chord_mappings[chord]:
+                if pitch[0] in self.chord_mappings[chord]:
                     score += duration
                 bar_duration += duration
                 melody_index += 1
