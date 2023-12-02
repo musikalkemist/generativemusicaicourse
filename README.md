@@ -69,6 +69,8 @@ Then, run the following code in the root directory:
 - [Cellular automata](https://www.youtube.com/watch?v=YoRPjU_Fbq0&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=13)
 - [Drum generation with cellular automata](https://www.youtube.com/watch?v=GIoLWVPb8mc&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=14)
 - [Genetic algorithms](https://www.youtube.com/watch?v=CAVy7OZ87mE&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=15)
-- [Melody harmonization with genetic algorithms]()
+- [Melody harmonization with genetic algorithms](https://www.youtube.com/watch?v=AmtLrd-cYSY&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=16)
+- [Transformers - Part 1](https://www.youtube.com/watch?v=FtXT-AFzSvg&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=17)
+- [Transformers - Part 2]()
 
 
