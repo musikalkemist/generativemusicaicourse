@@ -71,6 +71,6 @@ Then, run the following code in the root directory:
 - [Genetic algorithms](https://www.youtube.com/watch?v=CAVy7OZ87mE&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=15)
 - [Melody harmonization with genetic algorithms](https://www.youtube.com/watch?v=AmtLrd-cYSY&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=16)
 - [Transformers - Part 1](https://www.youtube.com/watch?v=FtXT-AFzSvg&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=17)
-- [Transformers - Part 2]()
-
+- [Transformers - Part 2](https://www.youtube.com/watch?v=ctbvMnbylsA&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=19)
+- [Melody generation with transformers]()
 
