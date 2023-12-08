@@ -76,3 +76,4 @@ Then, run the following code in the root directory:
 
 ### Part 3: Generative music tools for musicians
 - [Audio generation with RAVE](https://www.youtube.com/watch?v=j4LABY2d7k4&list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D&index=19)
+- [Piano generation with Compose & Embellish]()
