@@ -1,53 +1,61 @@
 # Generative Music AI Course
 
 ## Repository content
-This repository contains the resources for the Generative Music AI Course on 
-[The Sound of AI YouTube 
+This repository contains the resources for the Generative Music AI Course on
+[The Sound of AI YouTube
 channel](https://www.youtube.com/channel/UCZPFjMe1uRSirmSpznqvJfQ).
 
-Content is organised per lecture. Each lecture has a dedicated folder with the 
+Content is organised per lecture. Each lecture has a dedicated folder with the
 following structure:
 - Slides: PDF slides for the lecture (if available)
 - Code: Code examples for the lecture (if available)
 
 ## Organisers
-The course is produced by [The Sound of AI](https://thesoundofai.com/) in 
+The course is produced by [The Sound of AI](https://thesoundofai.com/) in
 collaboration with the [Music Technology Group](https://www.upf.edu/web/mtg)
-at Universitat Pompeu Fabra, 
+at Universitat Pompeu Fabra,
 Barcelona.
 
 ## Instructors
 There are 3 main instructors for the course:
 
 - [Valerio Velardo](https://thesoundofai.com/), founder of The Sound of AI
-- [Iran Roman](https://steinhardt.nyu.edu/people/iran-r-roman), 
+- [Iran Roman](https://steinhardt.nyu.edu/people/iran-r-roman),
   post-doctoral researcher at the Music and Research Lab at NYU.
 - [Xavier Serra](https://www.upf.edu/web/xavier-serra), director of the Music Technology Group at Universitat Pompeu Fabra, Barcelona.
 
 ## Video lectures
-All the videos of the course are available in this [YouTube 
+All the videos of the course are available in this [YouTube
 playlist](https://www.youtube.com/playlist?list=PL-wATfeyAMNqAPjwGT3ikEz3gMo23pl-D) on The Sound of AI channel.
 
 ## The Sound of AI Slack community
-Join [The Sound of AI Slack community](https://valeriovelardo.com/the-sound-of-ai-community/) to discuss the topics of the course. 
-Use the 
+Join [The Sound of AI Slack community](https://valeriovelardo.com/the-sound-of-ai-community/) to discuss the topics of the course.
+Use the
 #generative-music-ai-course channel.
 
 ## Generative Music AI Workshop in Barcelona (Dec 11 - 15, 2023)
-After the video lectures end in the first week of December 2023, there'll 
-be an in-person workshop. 
-You can get more info about the event and 
+After the video lectures end in the first week of December 2023, there'll
+be an in-person workshop.
+You can get more info about the event and
 register at this [website](https://www.upf.edu/web/mtg/generative-music-ai-workshop).
 
 ## Coding environement
 The code examples in Part 2 of the course are written in Python 3.8.
 
 ## Installing dependencies
-Create a Python virtual environment. 
+Create a Python virtual environment.
 
 Then, run the following code in the root directory:
 
-*$ pip install -r requirements.txt* 
+```bash
+pip install -r requirements.txt
+```
+
+To set up music21 to open your Sheet Music Reader of choice, run the following:
+
+```bash
+python -m music21.configure
+```
 
 ## Syllabus
 
