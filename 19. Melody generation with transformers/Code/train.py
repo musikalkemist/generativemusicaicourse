@@ -92,7 +92,14 @@ def _train_step(input, target, transformer):
         # Forward pass through the transformer model
         # TODO: Add padding mask for encoder + decoder and look-ahead mask
         # for decoder
-        predictions = transformer(input, target_input, True, None, None, None)
+        predictions = transformer(
+            input,
+            target_input,
+            training = True,
+            enc_padding_mask = None,
+            look_ahead_mask = None,
+            dec_padding_mask = None
+        )
 
         # Compute loss between the real output and the predictions
         loss = _calculate_loss(target_real, predictions)

@@ -69,7 +69,12 @@ class MelodyGenerator:
 
         for _ in range(num_notes_to_generate):
             predictions = self.transformer(
-                input_tensor, input_tensor, False, None, None, None
+                input_tensor,
+                input_tensor,
+                training = False,
+                enc_padding_mask = None,
+                look_ahead_mask = None,
+                dec_padding_mask = None,
             )
             predicted_note = self._get_note_with_highest_score(predictions)
             input_tensor = self._append_predicted_note(

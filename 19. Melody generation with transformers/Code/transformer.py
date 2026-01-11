@@ -165,11 +165,11 @@ class Transformer(tf.keras.Model):
             dict: Attention weights from the Decoder layers.
         """
         enc_output = self.encoder(
-            input, training, enc_padding_mask
+            input, training=training, mask=enc_padding_mask
         )  # (batch_size, input_seq_len, d_model)
 
         dec_output = self.decoder(
-            target, enc_output, training, look_ahead_mask, dec_padding_mask
+            target, enc_output, training=training, look_ahead_mask=look_ahead_mask, padding_mask=dec_padding_mask
         )  # (batch_size, tar_seq_len, d_model)
 
         logits = self.final_layer(
@@ -240,7 +240,7 @@ class Encoder(tf.keras.layers.Layer):
         x = self.dropout(x, training=training)
 
         for i in range(self.num_layers):
-            x = self.enc_layers[i](x, training, mask)
+            x = self.enc_layers[i](x, training=training, mask=mask)
 
         return x  # (batch_size, input_seq_len, d_model)
 
@@ -324,7 +324,7 @@ class Decoder(tf.keras.layers.Layer):
 
         for i in range(self.num_layers):
             x = self.dec_layers[i](
-                x, enc_output, training, look_ahead_mask, padding_mask
+                x, enc_output, training=training, look_ahead_mask=look_ahead_mask, padding_mask=padding_mask
             )
 
         return x
