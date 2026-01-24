@@ -42,50 +42,39 @@ from keras.layers import (
 
 def sinusoidal_position_encoding(num_positions, d_model):
     """
-    Compute positional encoding for a given position and dimension.
+    Compute sinusoidal positional encoding.
 
     Parameters:
-        num_positions (int): Number of positions.
-        d_model (int): Dimension of the model.
+        num_positions (int): Sequence length.
+        d_model (int): Model dimensionality.
 
     Returns:
-        Tensor: Positional encoding for the given position and dimension.
+        Tensor of shape (1, num_positions, d_model)
     """
 
-    angles = _get_angles(
-        np.arange(num_positions)[:, np.newaxis],
-        np.arange(d_model)[np.newaxis, :],
-        d_model,
-    )
+    # positions: (num_positions, 1)
+    positions = np.arange(num_positions)[:, np.newaxis]
 
-    # Apply sin to even indices in the array; 2i
-    sines = np.sin(angles[:, 0::2])
+    # dimension indices: (1, d_model)
+    dims = np.arange(d_model)[np.newaxis, :]
 
-    # Apply cos to odd indices in the array; 2i+1
-    cosines = np.cos(angles[:, 1::2])
+    # Compute angle rates
+    angle_rates = 1 / np.power(10000, (2 * (dims // 2)) / d_model)
 
-    pos_encoding = np.concatenate([sines, cosines], axis=-1)
-    pos_encoding = pos_encoding[np.newaxis, ...]  # (1, position, d_model)
+    # angles: (num_positions, d_model)
+    angles = positions * angle_rates
+
+    # Allocate output
+    pos_encoding = np.zeros_like(angles)
+
+    # Apply sin to even indices, cos to odd indices
+    pos_encoding[:, 0::2] = np.sin(angles[:, 0::2])
+    pos_encoding[:, 1::2] = np.cos(angles[:, 1::2])
+
+    # Add batch dimension
+    pos_encoding = pos_encoding[np.newaxis, ...]
 
     return tf.cast(pos_encoding, dtype=tf.float32)
-
-
-def _get_angles(pos, i, d_model):
-    """
-    Compute the angles for the positional encoding.
-
-    Parameters:
-        pos (np.ndarray): Positions.
-        i (np.ndarray): Indices.
-        d_model (int): Dimension of the model.
-
-    Returns:
-        np.ndarray: Angles for the positional encoding.
-    """
-    angle_dropout_rates = 1 / np.power(
-        10000, (2 * (i // 2)) / np.float32(d_model)
-    )
-    return pos * angle_dropout_rates
 
 
 class Transformer(tf.keras.Model):
