@@ -906,7 +906,7 @@ def parse_args():
     parser.add_argument(
         "--task",
         choices=["melody", "chord", "song"],
-        default="melody",
+        default="song",
         help="Select generation task.",
     )
     parser.add_argument(
