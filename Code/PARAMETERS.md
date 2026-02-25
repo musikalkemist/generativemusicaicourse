@@ -18,6 +18,10 @@ python "12. Melody generation with Markov chains/Code/markovchain.py" [options]
   - Generate chord progression only.
 - `--task song`
   - Generate melody + chords together in one score.
+- `--task realtime`
+  - Interactive bar-by-bar chorale generation.
+- `--task harmonize`
+  - Harmonize an input melody into SATB.
 
 ## Train / Load Control
 
@@ -112,6 +116,36 @@ python "12. Melody generation with Markov chains/Code/markovchain.py" [options]
 - `--beats-per-bar <int>` (default: `4`)
   - Melody note slots per bar.
 
+- `--song-style {lead,chorale}` (default: `lead`)
+  - `lead`: original melody + block chords layout.
+  - `chorale`: SATB 4-voice harmony conditioned on generated chord progression.
+
+- `--chorale-beam-width <int>` (default: `20`)
+  - Beam width for SATB search in `chorale` mode.
+  - Higher values are slower but usually produce smoother results.
+
+- `--chorale-candidates-per-voice <int>` (default: `6`)
+  - Number of ranked pitch candidates per voice before combining SATB sonorities.
+
+- `--chorale-top-sonorities <int>` (default: `24`)
+  - Number of top local SATB sonorities kept per beam item at each time step.
+
+- `--cadence-every-bars <int>` (default: `4`)
+  - Forces a V-I cadence every N bars in `song` modes.
+  - Use `1` or `0` to effectively disable cadence forcing.
+
+- `--disable-progression-blocks`
+  - Disables progression-block transitions in `song` modes.
+  - Uses direct chord-chain generation only.
+
+- `--progression-laplace-alpha <float>` (default: `1.0`)
+  - Laplace smoothing used by the progression-block transition model.
+  - Progression blocks are extracted from `dataChords` and split into major/minor sets.
+
+- `--chorale-repeat-note-penalty <float>` (default: `5.0`)
+  - Base penalty for repeating the same note in the same voice in chorale mode.
+  - Additional streak penalty is applied for consecutive repeats.
+
 - `--melody-model-path <path>` (default: `models/factorized_markov_model.npz`)
   - Melody model path used in song mode.
 
@@ -123,6 +157,25 @@ python "12. Melody generation with Markov chains/Code/markovchain.py" [options]
 
 - `--chord-data-folder <path>` (default: `dataChords`)
   - Chord training dataset when retraining in song mode.
+
+- `--realtime-bars <int>` (default: `16`)
+  - Number of bars generated in realtime mode before auto-stop.
+
+- `--disable-realtime-live-update`
+  - Disable per-bar live MusicXML snapshot updates in realtime mode.
+
+- `--realtime-open-each-bar`
+  - Re-open the live MusicXML file every bar update (can open many tabs/windows).
+
+- `--realtime-live-file <path>` (default: `generated_realtime_live.musicxml`)
+  - MusicXML file path updated after each realtime bar.
+
+- `--melody-input <path>`
+  - Required for `--task harmonize`.
+  - Input melody file (MIDI/MusicXML) used as soprano guide.
+
+- `--melody-input-folder <path>` (default: `melodyInput`)
+  - Default folder searched for `--melody-input` when direct path is not found.
 
 - Melody-shaping options also apply in song mode:
   - `--seed-midi`
@@ -155,7 +208,13 @@ python "12. Melody generation with Markov chains/Code/markovchain.py" --task cho
 python "12. Melody generation with Markov chains/Code/markovchain.py" --task song --song-bars 8 --beats-per-bar 4
 ```
 
-### 4) Song with tighter melody constraints
+### 4) Generate SATB chorale song
+
+```powershell
+python "12. Melody generation with Markov chains/Code/markovchain.py" --task song --song-style chorale --song-bars 8 --beats-per-bar 4
+```
+
+### 5) Song with tighter melody constraints
 
 ```powershell
 python "12. Melody generation with Markov chains/Code/markovchain.py" --task song --pitch-min 55 --pitch-max 79 --max-jump 5 --key C --mode major
